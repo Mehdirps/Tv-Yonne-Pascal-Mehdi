@@ -5,7 +5,7 @@
 // const DBNAME = 'rps_dev_design';
 
 // $dsn = 'mysql:host='.DBHOST.';dbname='.DBNAME;
-$dsn = 'mysql:host=localhost;dbname=tv-yonne';
+$dsn = 'mysql:host=localhost;dbname=tv_yonne';
 ("SELECT * FROM 'emissions'");
 
 try {
