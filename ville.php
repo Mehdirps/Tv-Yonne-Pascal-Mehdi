@@ -36,15 +36,25 @@
         <section id="emissions">
             <?php
             require_once "includes/bdd_connect.php";
-            $sql = "SELECT * FROM `emission`";
-            echo 
-            "<article class='emission'>
+            
+            $sql = "SELECT * FROM `videos`";
+            $query = $pdo->query($sql);
+            $resultats = $query->fetchAll();
+
+            foreach($resultats as $resultat){
+                $emission = $resultat['emission_id'];
+                $url = $resultat['link'];
+                $image = $resultat['img_src'];
+                $title = $resultat['name'];
+                echo 
+                "<article class='emission'>
                 <h2>$emission</h2>
                 <a href='$url' class='url-modal' href=''>
-                    <img src='img/$image' alt='$image'>
-                    <h3>$title</h3>
+                <img src='img/$image' alt='$image'>
+                <h3>$title</h3>
                 </a>
-            </article>"
+                </article>";
+            }
             ?>
             <nav aria-label="pagination" class="page">
                 <ul class="pagination">

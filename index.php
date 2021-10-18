@@ -34,14 +34,27 @@
         <img class="imgplateau" src="img/Clipboard - 15 septembre 2021 15_07.png" alt="Plateau de tournage">
         <h2 class="last-emissions">Nos dernières émissions</h2>
         <section id="emissions">
-            <?php
-            echo "<article class='emission'>
-            <h2>$emission</h2>
-            <a href='$url' class='url-modal' href=''>
-            <img src='img/$image' alt='Rentré avalon'>
-            <h3>$title</h3>
-            </a>
-            </article>"
+        <?php
+            require_once "includes/bdd_connect.php";
+
+            $sql = "SELECT * FROM `videos`";
+            $query = $pdo->query($sql);
+            $resultats = $query->fetchAll();
+            
+            foreach($resultats as $resultat){
+                $emission = $resultat['emission_id'];
+                $url = $resultat['link'];
+                $image = $resultat['img_src'];
+                $title = $resultat['name'];
+                echo 
+                "<article class='emission'>
+                <h2>$emission</h2>
+                <a href='$url' class='url-modal' href=''>
+                <img src='img/$image' alt='$image'>
+                <h3>$title</h3>
+                </a>
+                </article>";
+            }
             ?>
         </section>
         <div class="more">

@@ -40,67 +40,26 @@
         </section>
         <span class="fond"></span>
         <section class="emissions">
-            <h2 id="decouvert">A découvert</h2>
             <?php
-            echo
-            "<section class='carroussel-emission'>
-                <div class='image'><img src='img/$image' alt='image></div>
-            </section>"
+            require_once "includes/bdd_connect.php";
+            
+            $sql = "SELECT * FROM `videos`";
+            $query = $pdo->query($sql);
+            $resultats = $query->fetchAll();
+
+            foreach($resultats as $resultat){
+
+                $image = $resultat['img_src'];
+                $name = $resultat['name'];
+                $emission = $resultat['emission_id'['name']];
+                echo
+                "<h2 id='decouvert'>$emission</h2>
+                <section class='carroussel-emission'>
+                <div class='image'><img src='img/$image' alt='$name'></div>
+                </section>";
+                var_dump($emission);
+            }
             ?>
-            <h2 id="avant">C'était comment avant ?</h2>
-            <section class="carroussel-emission">
-                <?php
-                echo
-                "<section class='carroussel-emission'>
-                <div class='image'><img src='img/$image' alt='image></div>
-            </section>"
-                ?>
-            </section>
-            <h2 id="pros">Image de pros</h2>
-            <section class="carroussel-emission">
-                <?php
-                echo
-                "<section class='carroussel-emission'>
-                <div class='image'><img src='img/$image' alt='image></div>
-            </section>"
-                ?>
-            </section>
-            <h2 id="jt">Le JT</h2>
-            <section class="carroussel-emission">
-                <?php
-                echo
-                "<section class='carroussel-emission'>
-                <div class='image'><img src='img/$image' alt='image></div>
-            </section>"
-                ?>
-            </section>
-            <h2 id="couverts">Restons couverts</h2>
-            <section class="carroussel-emission">
-                <?php
-                echo
-                "<section class='carroussel-emission'>
-                <div class='image'><img src='img/$image' alt='image></div>
-            </section>"
-                ?>
-            </section>
-            <h2 id="culture">Top culture</h2>
-            <section class="carroussel-emission">
-                <?php
-                echo
-                "<section class='carroussel-emission'>
-                <div class='image'><img src='img/$image' alt='image></div>
-            </section>"
-                ?>
-            </section>
-            <h2 id="garage">Voix de garage</h2>
-            <section class="carroussel-emission">
-                <?php
-                echo
-                "<section class='carroussel-emission'>
-                <div class='image'><img src='img/$image' alt='image></div>
-            </section>"
-                ?>
-            </section>
         </section>
         <?php
         include "includes/partners.php"
