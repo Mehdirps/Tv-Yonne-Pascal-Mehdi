@@ -34,48 +34,16 @@
         </section>
         <h2 class="titre-accueil">Découvrer toutes les emissions tournées à Sens</h2>
         <section id="emissions">
-            <article class="emission">
-                <h2>Les communes</h2>
-                <a href="https://www.youtube.com/embed/vVpuIhJocsE?controls=0" class="url-modal" href="">
-                    <img src="img/volley-sens.jpeg" alt="Club de volley-sens">
-                    <h3>Conseil du club Sens Volley 89</h3>
+            <?php
+            echo 
+            "<article class='emission'>
+                <h2>$emission</h2>
+                <a href='$url' class='url-modal' href=''>
+                    <img src='img/$image' alt='$image'>
+                    <h3>$title</h3>
                 </a>
-            </article>
-            <article class="emission">
-                <h2>Les communes</h2>
-                <a href="https://www.youtube.com/embed/GFkfGfcDlqI" class="url-modal">
-                    <img src="img/theatre sens.png" alt="Inauguration restaurant">
-                    <h3>ARIANNE ASCARIDE AU THÉÂTRE DE SENS</h3>
-                </a>
-            </article>
-            <article class="emission">
-                <h2>L'info !</h2>
-                <a href="https://www.youtube.com/embed/6VxqGpV8CLY" class="url-modal">
-                    <img src="img/taillandier.png" alt="Installation module pour la cantine de Theil sur Vanne">
-                    <h3>À LA DÉCOUVERTE DE FUN SPACE AVEC ROMI TAILLANDIER</h3>
-                </a>
-            </article>
-            <article class="emission">
-                <h2>C'était comment avant ?</h2>
-                <a href="https://www.youtube.com/embed/JW725-_2U2U" class="url-modal">
-                    <img src="img/art.png" alt="c'etait comment avant ?">
-                    <h3>LA GALERIE D’ART DE SENS AVEC DIDIER PERROCHE</h3>
-                </a>
-            </article>
-            <article class="emission">
-                <h2>L'info !</h2>
-                <a href="https://www.youtube.com/embed/JzUBXKWHSBo" class="url-modal">
-                    <img src="img/vaccin.png" alt="Atelier de sculture">
-                    <h3>ZOOM SUR LA VACCINATION A SENS</h3>
-                </a>
-            </article>
-            <article class="emission">
-                <h2>L'info !</h2>
-                <a href="https://www.youtube.com/embed/v8hjgnO-2p0" class="url-modal">
-                    <img src="img/simplicicar.jpg" alt="Atelier de sculture">
-                    <h3>SIMPLICICAR VOUS ACCOMPAGNE DANS L’ACHAT OU LA VENTE DE VOTRE VEHICULE</h3>
-                </a>
-            </article>
+            </article>"
+            ?>
             <nav aria-label="pagination" class="page">
                 <ul class="pagination">
                     <li><a href=""><span aria-hidden="true">«</span><span class="visuallyhidden">Précédent</span></a></li>

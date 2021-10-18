@@ -34,48 +34,15 @@
         <img class="imgplateau" src="img/Clipboard - 15 septembre 2021 15_07.png" alt="Plateau de tournage">
         <h2 class="last-emissions">Nos dernières émissions</h2>
         <section id="emissions">
-            <article class="emission">
-                <h2>Le JT</h2>
-                <a href="https://www.youtube.com/embed/F5Bp5M93ua0" class="url-modal" href="">
-                    <img src="img/Capture-décran-4 -536x862.png" alt="Rentré avalon">
-                    <h3>La rentrée des classes du lycée d'Avallon</h3>
-                </a>
-            </article>
-            <article class="emission">
-                <h2>Les communes</h2>
-                <a href="https://www.youtube.com/embed/RE59IoXyyUc" class="url-modal" href="">
-                    <img src="img/Capture-décran-2-1536x862.png" alt="Inauguration restaurant">
-                    <h3>Inauguration du restaurant "Le Pérou" à Saint-Julien-du-Sault</h3>
-                </a>
-            </article>
-            <article class="emission">
-                <h2>L'info !</h2>
-                <a href="https://www.youtube.com/embed/tJUr_pGvOxU" class="url-modal" href="">
-                    <img src="img/Capture-décran-3.2-1536x862.png" alt="Installation module pour la cantine de Theil sur Vanne">
-                    <h3>Installation des modules pour la cantine de Theil sur Vanne</h3>
-                </a>
-            </article>
-            <article class="emission">
-                <h2>C'était comment avant ?</h2>
-                <a href="https://www.youtube.com/embed/sb8s1RDZGV4" class="url-modal" href="">
-                    <img src="img/Capture-décran-5-536x862.png" alt="c'etait comment avant ?">
-                    <h3>"L'Yonne notre mémoire" "Raconte-nous !"</h3>
-                </a>
-            </article>
-            <article class="emission">
-                <h2>L'info !</h2>
-                <a href="https://www.youtube.com/embed/kjE1CnzxPkk" class="url-modal" href="">
-                    <img src="img/Capture-décran-1 -536x862.png" alt="Atelier de sculture">
-                    <h3>Atelier de sculpture avec Yann RAUFASTE</h3>
-                </a>
-            </article>
-            <article class="emission">
-                <h2>L'info !</h2>
-                <a href="https://www.youtube.com/embed/kjE1CnzxPkk" class="url-modal" href="">
-                    <img src="img/Capture-décran-1 -536x862.png" alt="Atelier de sculture">
-                    <h3>Atelier de sculpture avec Yann RAUFASTE</h3>
-                </a>
-            </article>
+            <?php
+            echo "<article class='emission'>
+            <h2>$emission</h2>
+            <a href='$url' class='url-modal' href=''>
+            <img src='img/$image' alt='Rentré avalon'>
+            <h3>$title</h3>
+            </a>
+            </article>"
+            ?>
         </section>
         <div class="more">
             <a href="emission.html">
@@ -92,7 +59,7 @@
                 <?php
                 include "includes/map.php"
                 ?>
-                    <p style="text-align: center;">Carte designé par Franck Vasseur</p>
+                <p style="text-align: center;">Carte designé par Franck Vasseur</p>
             </section>
             <?php
             include "includes/partners.php"

@@ -41,129 +41,65 @@
         <span class="fond"></span>
         <section class="emissions">
             <h2 id="decouvert">A découvert</h2>
-            <section class="carroussel-emission">
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1"></div>
-            </section>
+            <?php
+            echo
+            "<section class='carroussel-emission'>
+                <div class='image'><img src='img/$image' alt='image></div>
+            </section>"
+            ?>
             <h2 id="avant">C'était comment avant ?</h2>
             <section class="carroussel-emission">
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
+                <?php
+                echo
+                "<section class='carroussel-emission'>
+                <div class='image'><img src='img/$image' alt='image></div>
+            </section>"
+                ?>
             </section>
             <h2 id="pros">Image de pros</h2>
             <section class="carroussel-emission">
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
+                <?php
+                echo
+                "<section class='carroussel-emission'>
+                <div class='image'><img src='img/$image' alt='image></div>
+            </section>"
+                ?>
             </section>
             <h2 id="jt">Le JT</h2>
             <section class="carroussel-emission">
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
+                <?php
+                echo
+                "<section class='carroussel-emission'>
+                <div class='image'><img src='img/$image' alt='image></div>
+            </section>"
+                ?>
             </section>
             <h2 id="couverts">Restons couverts</h2>
             <section class="carroussel-emission">
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
+                <?php
+                echo
+                "<section class='carroussel-emission'>
+                <div class='image'><img src='img/$image' alt='image></div>
+            </section>"
+                ?>
             </section>
             <h2 id="culture">Top culture</h2>
             <section class="carroussel-emission">
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
+                <?php
+                echo
+                "<section class='carroussel-emission'>
+                <div class='image'><img src='img/$image' alt='image></div>
+            </section>"
+                ?>
             </section>
             <h2 id="garage">Voix de garage</h2>
             <section class="carroussel-emission">
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
-                <div class="image"><img src="img/img1caroussel1.PNG" alt="image carroussel-emission"></div>
-                <div class="image"><img src="img/img2caroussel1.PNG" alt="img2caroussel1">
-                </div>
-                <div class="image"><img src="img/img3caroussel1.PNG" alt="img3caroussel1">
-                </div>
+                <?php
+                echo
+                "<section class='carroussel-emission'>
+                <div class='image'><img src='img/$image' alt='image></div>
+            </section>"
+                ?>
             </section>
         </section>
         <?php
