@@ -487,7 +487,7 @@ for (let departement of departements) {
     //Je fait une condition disant que SI une balise A a la classe ".Visited"
     if (departement.classList.contains("visited")) {
         // Alors il ajoute le href "ville.html"
-        departement.setAttribute("href", "ville.html");
+        departement.setAttribute("href", "ville.php");
     };
 };
 for (let compteur = 0; compteur < Object.keys(liste_villes).length; compteur++) {
