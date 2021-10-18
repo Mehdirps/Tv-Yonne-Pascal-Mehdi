@@ -35,6 +35,8 @@
         <h2 class="titre-accueil">Découvrer toutes les emissions tournées à Sens</h2>
         <section id="emissions">
             <?php
+            require_once "includes/bdd_connect.php";
+            $sql = "SELECT * FROM `emission`";
             echo 
             "<article class='emission'>
                 <h2>$emission</h2>

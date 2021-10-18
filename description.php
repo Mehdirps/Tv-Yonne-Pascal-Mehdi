@@ -51,12 +51,21 @@
         <h1>Notre équipe</h1>
         <section class="equipe" id="equipe">
             <?php
-            echo
-            "<div class='membre'>
-                <img src='img-equipe/$image' alt=''>
-                <p>$name</p>
-            </div>"
-            ?>
+                require_once "includes/bdd_connect.php";
+                $sql = "SELECT * FROM `staffs`";
+                $query = $pdo->query($sql);
+                $resultats = $query->fetchAll();
+
+                foreach($resultats as $resultat){    
+                    $image = $resultat['img_src'];
+                    $name = $resultat['name'];
+                    echo
+                    "<div class='membre'>
+                    <img src='img-equipe/$image' alt=''>
+                    <p>$name</p>
+                    </div>";
+                }
+                ?>
         </section>
     </main>
     <?php
