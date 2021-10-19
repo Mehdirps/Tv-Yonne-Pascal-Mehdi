@@ -34,19 +34,23 @@
         <img class="imgplateau" src="img/Clipboard - 15 septembre 2021 15_07.png" alt="Plateau de tournage">
         <h2 class="last-emissions">Nos dernières émissions</h2>
         <section id="emissions">
-        <?php
-            require_once "includes/bdd_connect.php";
+            <?php
+            require_once "includes/connexionbase.php";
 
             $sql = "SELECT * FROM `videos`";
-            $query = $pdo->query($sql);
-            $resultats = $query->fetchAll();
             
-            foreach($resultats as $resultat){
+            $requete = $db->query($sql);
+
+
+            $resultats = $requete->fetchAll();
+        
+
+            foreach ($resultats as $resultat) {
                 $emission = $resultat['emission_id'];
                 $url = $resultat['link'];
                 $image = $resultat['img_src'];
                 $title = $resultat['name'];
-                echo 
+                echo
                 "<article class='emission'>
                 <h2>$emission</h2>
                 <a href='$url' class='url-modal' href=''>
@@ -72,7 +76,7 @@
                 <?php
                 include "includes/map.php"
                 ?>
-                <p style="text-align: center;">Carte designé par Franck Vasseur</p>
+                <p style="text-align: center;">Carte créée par Franck Vasseur</p>
             </section>
             <?php
             include "includes/partners.php"

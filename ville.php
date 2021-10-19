@@ -29,17 +29,21 @@
             <div class="close-modal">
                 <p>&times;</p>
             </div>
-            <!-- <img src="img/le-silex.jpg" alt=""> -->
             <iframe id="iframe-ville" class="iframemob" width="300" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
         <h2 class="titre-accueil">Découvrer toutes les emissions tournées à Sens</h2>
         <section id="emissions">
             <?php
-            require_once "includes/bdd_connect.php";
+            require_once "includes/connexionbase.php";
             
             $sql = "SELECT * FROM `videos`";
-            $query = $pdo->query($sql);
-            $resultats = $query->fetchAll();
+            
+            $requete = $db->query($sql);
+
+
+            $resultats = $requete->fetchAll();
+        
+
 
             foreach($resultats as $resultat){
                 $emission = $resultat['emission_id'];
