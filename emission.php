@@ -35,7 +35,6 @@
             <div class="close-modal">
                 <p>&times;</p>
             </div>
-            <!-- <img src="img/le-silex.jpg" alt=""> -->
             <iframe class="iframemob" width="300" height="315" src="https://www.youtube.com/embed/G0KJJF2B3HE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
         <span class="fond"></span>
