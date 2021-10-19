@@ -36,7 +36,7 @@
             <?php
             require_once "includes/connexionbase.php";
             
-            $sql = "SELECT videos.*,emissions.name FROM `videos` LEFT JOIN emissions on emissions.id = videos.emission_id GROUP BY videos.id";
+            $sql = "SELECT videos.*,emissions.name FROM `videos` LEFT JOIN emissions on emissions.id = videos.emission_id GROUP BY videos.id LIMIT 6";
             
             $requete = $db->query($sql);
 

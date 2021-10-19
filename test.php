@@ -11,7 +11,6 @@ const DBNAME = 'tvyonne';
 
 $dsn = 'mysql:dbname=' . DBNAME . ';host=' . DBHOST;
 
-
 try {
 
 

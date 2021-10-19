@@ -43,7 +43,7 @@
             <?php
             require_once "includes/bdd_connect.php";
             
-            $sql = "SELECT * FROM `videos`";
+            $sql = "SELECT videos.*,emissions.name FROM `videos` LEFT JOIN emissions on emissions.id = videos.emission_id GROUP BY videos.id LIMIT 6";
             $query = $pdo->query($sql);
             $resultats = $query->fetchAll();
 
@@ -51,13 +51,13 @@
 
                 $image = $resultat['img_src'];
                 $name = $resultat['name'];
-                $emission = $resultat['emission_id'['name']];
+                $emission = $resultat['emission_id'];
                 echo
-                "<h2 id='decouvert'>$emission</h2>
-                <section class='carroussel-emission'>
+                "<h2 id='decouvert'>$emission</h2>";
+
+                echo "<section class='carroussel-emission'>
                 <div class='image'><img src='img/$image' alt='$name'></div>
                 </section>";
-                var_dump($emission);
             }
             ?>
         </section>
