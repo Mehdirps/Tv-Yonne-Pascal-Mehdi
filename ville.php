@@ -36,7 +36,7 @@
             <?php
             require_once "includes/connexionbase.php";
             
-            $sql = "SELECT * FROM `videos`";
+            $sql = "SELECT videos.*,emissions.name FROM `videos` LEFT JOIN emissions on emissions.id = videos.emission_id GROUP BY videos.id";
             
             $requete = $db->query($sql);
 
@@ -44,13 +44,12 @@
             $resultats = $requete->fetchAll();
         
 
-
-            foreach($resultats as $resultat){
-                $emission = $resultat['emission_id'];
+            foreach ($resultats as $resultat) {
+                $emission = $resultat['name'];
                 $url = $resultat['link'];
                 $image = $resultat['img_src'];
-                $title = $resultat['name'];
-                echo 
+                $title = $resultat['description'];
+                echo
                 "<article class='emission'>
                 <h2>$emission</h2>
                 <a href='$url' class='url-modal' href=''>
