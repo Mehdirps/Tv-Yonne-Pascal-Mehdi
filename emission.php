@@ -42,20 +42,28 @@
         <section class="emissions">
             <?php
             require_once "includes/bdd_connect.php";
-            
-            $sql = "SELECT videos.*,emissions.name FROM `videos` LEFT JOIN emissions on emissions.id = videos.emission_id GROUP BY videos.id LIMIT 6";
+
+            $sql = "SELECT videos.*,emissions.name FROM `videos` LEFT JOIN emissions on emissions.id = videos.emission_id GROUP BY videos.id ORDER BY emissions.id";
             $query = $pdo->query($sql);
             $resultats = $query->fetchAll();
-
-            foreach($resultats as $resultat){
+            
+            $prev_emission = "";
+            foreach ($resultats as $resultat) {
 
                 $image = $resultat['img_src'];
-                $name = $resultat['name'];
-                $emission = $resultat['emission_id'];
-                echo
-                "<h2 id='decouvert'>$emission</h2>";
+                $name = $resultat['description'];
+                $emission = $resultat['name'];
+                $emission_id = $resultat['id'];
+                $video_id = $resultat['emission_id'];
 
-                echo "<section class='carroussel-emission'>
+                if ($emission != $prev_emission) {
+                    
+                    echo
+                    "<h2 id='decouvert'>$emission</h2>";
+                }
+                $prev_emission = $resultat['name'];
+                echo
+                "<section class='carroussel-emission'>
                 <div class='image'><img src='img/$image' alt='$name'></div>
                 </section>";
             }
