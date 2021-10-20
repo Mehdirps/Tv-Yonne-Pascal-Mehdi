@@ -1,0 +1,33 @@
+.board{
+    flex: 1;
+    .table{
+        font-size: 3.5rem;
+        background-color: $violet;
+        text-align: center;
+        color: $blanc;
+    }
+    .add{
+        margin-top: 10px;
+        font-size: 1.2rem;
+        text-align: center;
+        font-weight: bold;
+    }
+    .columns{
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .datas{
+            margin:10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .modify,.delete{
+                opacity: 0;
+            }
+        }
+    }
+}

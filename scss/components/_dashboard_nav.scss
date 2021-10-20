@@ -1,0 +1,32 @@
+    nav {
+        padding: 5px;
+        background-color: $fondbody;
+        width: max-content;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        color: $blanc;
+
+        .user {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .name {
+                font-size: 2rem;
+                color: $violet;
+            }
+        }
+
+        .lien {
+
+            ul {
+                width: 100%;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    }
