@@ -6,7 +6,7 @@ require_once "../includes/bdd_connect.php";
     <a href="" class="add">Ajouter des données</a>
     <div class="columns">
         <div class="datas">
-            <p class="modify">Modifer</p>
+            <p class="modify">Modifier</p>
             <p class="delete">Supprimer</p>
             <p>E-mail</p>
             <p>Création</p>
@@ -17,13 +17,14 @@ require_once "../includes/bdd_connect.php";
         $resultats = $query->fetchAll();
 
         foreach ($resultats as $resultat) {
+            $id = $resultat['id'];
             $name = $resultat['name'];
             $email = $resultat['email'];
 
             echo
             "<div class='datas'>
-                <a href=''>Modifer</a>
-                <a href=''>Supprimer</a>
+                <a href='$id'>Modifier</a>
+                <a href='$id'>Supprimer</a>
                 <p>$name</p>
                 <p>$email</p>
                 </div>";

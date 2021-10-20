@@ -81,7 +81,6 @@ if (!empty($_POST)) {
 <body>
     <?php
     require_once 'includes/corpssignin.php';
-    var_dump($_SESSION);
     ?>
         <?php
         if(isset($_SESSION['message'])){
