@@ -11,11 +11,11 @@
 
 <body>
     <?php
-    include "../includes/dashboard_nav.php"
+    include "../dashboard_includes/dashboard_nav.php"
     ?>
     <main>
         <?php
-        include "../includes/dashboard_formulaires.php";
+        include "../dashboard_includes/dashboard_formulaire.php";
         ?>
     </main>
 </body>
