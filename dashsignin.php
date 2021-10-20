@@ -58,7 +58,7 @@ if (!empty($_POST)) {
             'email' => $user['email']
         ];
         // On redirige vers la page de notre choix
-        header('Location:index.php');
+        header('Location:dashboard.php');
 
         exit;
     }
