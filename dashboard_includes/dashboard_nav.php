@@ -6,7 +6,7 @@
     </div>
     <div class="lien">
         <ul>
-            <li><a href="../../dashboard.php">Accueil</a></li>
+            <li><a href="/dashboard.php">Accueil</a></li>
             <li><a href="/dashboard_pages/videos.php">Videos</a></li>
             <li><a href="/dashboard_pages/emissions.php">Emissions</a></li>
             <li><a href="/dashboard_pages/city.php">City</a></li>
