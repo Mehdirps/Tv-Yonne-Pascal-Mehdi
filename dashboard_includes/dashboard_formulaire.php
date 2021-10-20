@@ -1,11 +1,13 @@
+<?php
+require_once "../includes/bdd_connect.php";
+?>
 <section class="board">
     <h1 class="table">Formulaire</h1>
-    <p class="add">Ajouter des données</p>
+    <a href="" class="add">Ajouter des données</a>
     <div class="columns">
         <div class="datas">
             <p class="modify">Modifer</p>
             <p class="delete">Supprimer</p>
-            <p>ID</p>
             <p>Nom</p>
             <p>Prenom</p>
             <p>Email</p>
@@ -13,15 +15,30 @@
             <p>Message</p>
             <p>Création</p>
         </div>
-        <div class="datas">
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-        </div>
-        
+        <?php
+        $sql = "SELECT * FROM `formulaires`";
+        $query = $pdo->query($sql);
+        $resultats = $query->fetchAll();
+
+        foreach ($resultats as $resultat) {
+            $name = $resultat['name'];
+            $firstname = $resultat['first_name'];
+            $email = $resultat['email'];
+            $subject = $resultat['subject'];
+            $message = $resultat['message'];
+            $creation = $resultat['created_at'];
+            echo
+            "<div class='datas'>
+                <a href=''>Modifer</a>
+                <a href=''>Supprimer</a>
+                <p>$name</p>
+                <p>$firstname</p>
+                <p>$email</p>
+                <p>$subject</p>
+                <p>$message</p>
+                <p>$creation</p>
+                </div>";
+        }
+        ?>
     </div>
 </section>
