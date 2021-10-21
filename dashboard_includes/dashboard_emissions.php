@@ -6,7 +6,7 @@ require_once "../includes/bdd_connect.php";
     <a href="" class="add">Ajouter des données</a>
     <div class="columns">
         <div class="datas">
-            <p class="modify">Modifer</p>
+            <p class="modify">Modifier</p>
             <p class="delete">Supprimer</p>
             <p>ID de l'emission</p>
             <p>Nom</p>
@@ -22,8 +22,8 @@ require_once "../includes/bdd_connect.php";
 
             echo
             "<div class='datas'>
-                <a href=''>Modifer</a>
-                <a href=''>Supprimer</a>
+                <a href='$id'>Modifier</a>
+                <a href='$id'>Supprimer</a>
                 <p>$id</p>
                 <p>$name</p>
                 </div>";

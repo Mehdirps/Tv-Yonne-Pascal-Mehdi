@@ -67,6 +67,8 @@ nav .lien ul li a {
 }
 
 .board .add {
+  display: block;
+  width: 100%;
   margin-top: 10px;
   font-size: 1.2rem;
   text-align: center;
