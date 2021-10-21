@@ -6,7 +6,7 @@
 
 // $dsn = 'mysql:host='.DBHOST.';dbname='.DBNAME;
 $dsn = 'mysql:host=localhost;dbname=tvyonne';
-("SELECT * FROM 'emissions'");
+
 
 try {
     $pdo = new PDO($dsn, 'root', '');
