@@ -26,7 +26,7 @@ require_once "../includes/bdd_connect.php";
             echo
             "<div class='datas'>
                 <a href='$id'>Modifier</a>
-                <a href='$id'>Supprimer</a>
+                <a href='../dashboard_deletes_pages/delete_users.php?id=$id'>Supprimer</a>
                 <p>$name</p>
                 <p>$email</p>
                 <p>$role</p>

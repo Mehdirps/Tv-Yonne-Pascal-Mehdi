@@ -23,7 +23,7 @@ require_once "../includes/bdd_connect.php";
             echo
             "<div class='datas'>
                 <a href='$id'>Modifier</a>
-                <a href='$id'>Supprimer</a>
+                <a href='../dashboard_deletes_pages/delete_emissions.php?id=$id'>Supprimer</a>
                 <p>$id</p>
                 <p>$name</p>
                 </div>";
