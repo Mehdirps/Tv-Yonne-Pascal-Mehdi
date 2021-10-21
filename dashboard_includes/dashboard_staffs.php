@@ -20,11 +20,10 @@ require_once "../includes/bdd_connect.php";
             $id = $resultat['id'];
             $name = $resultat['name'];
             $image = $resultat['img_src'];
-
             echo
             "<div class='datas'>
                 <a href='$id'>Modifier</a>
-                <a href='../dashboard_deletes_pages/delete_staffs.php?id=$id>Supprimer</a>
+                <a href='../dashboard_deletes_pages/delete_staffs.php?id=$id'>Supprimer</a>
                 <p>$name</p>
                 <p>$image</p>
                 </div>";

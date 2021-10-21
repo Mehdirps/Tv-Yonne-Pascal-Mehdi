@@ -1,4 +1,5 @@
 @import "components/variables";
-@import "components/dashboard_nav";
-@import "components/board";
-@import "components/dashboard_body";
+@import "dashboard_components/dashboard_nav";
+@import "dashboard_components/board";
+@import "dashboard_components/dashboard_body";
+@import "dashboard_components/add";
