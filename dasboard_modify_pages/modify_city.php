@@ -5,7 +5,7 @@ require_once "../includes/bdd_connect.php";
 $videoId = $_GET['id'];
 
 
-$sql = "DELETE FROM `city` WHERE `city`.`id` = :cityid ";
+$sql = "update `city` WHERE `city`.`id` = :cityid ";
 
 $query = $pdo->prepare($sql);
 
