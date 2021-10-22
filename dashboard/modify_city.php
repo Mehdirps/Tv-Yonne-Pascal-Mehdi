@@ -15,9 +15,35 @@ if (!empty($_GET)) {
 
         exit;
     }
+} else {
+    header("Location: city.php");
 }
+        // $requete = $pdo->prepare($sql);
+    
+        // $requete->bindValue(':name', $name);
+        // $requete->bindValue(':citycode', $citycode);
 
-if (!empty($_POST)) {
+
+        // $requete->execute();
+
+
+
+
+require_once "../includes/bdd_connect.php";
+
+    $sql = "SELECT * FROM `city`";
+
+
+
+
+
+
+
+
+
+
+
+    if (!empty($_POST)) {
     // var_dump($_POST);
     // die;
 
@@ -48,17 +74,17 @@ if (!empty($_POST)) {
 
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modifier une ville</title>
-    <link rel="stylesheet" href="../css/dashboard.css">
-</head>
-
-<body>
-    <?php
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modifier une ville</title>
+        <link rel="stylesheet" href="../css/dashboard.css">
+    </head>
+    
+    <body>
+        <?php
     include "dashboard_nav.php";
     ?>
     <main class="add">
@@ -66,7 +92,7 @@ if (!empty($_POST)) {
         <form method="post">
             <div>
                 <label for="name">Nom</label>
-                <input type="text" name="name">
+                <input type="text" name="name" id="name" value="<?php echo $_GET">
             </div>
             <div>
                 <label for="code">Code commune</label>
@@ -76,6 +102,8 @@ if (!empty($_POST)) {
                 <button type="submit">Ajouter</button>
             </div>
         </form>
+        <?php
+        ?>
     </main>
 </body>
 
