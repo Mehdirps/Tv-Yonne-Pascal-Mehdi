@@ -92,7 +92,7 @@ require_once "../includes/bdd_connect.php";
         <form method="post">
             <div>
                 <label for="name">Nom</label>
-                <input type="text" name="name" id="name" value="<?php echo $_GET">
+                <input type="text" name="name" id="name" value="<?php echo $_GET ?>">
             </div>
             <div>
                 <label for="code">Code commune</label>
