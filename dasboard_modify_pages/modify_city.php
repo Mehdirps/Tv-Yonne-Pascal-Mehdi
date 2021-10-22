@@ -1,15 +1,25 @@
 <?php
+session_start();
 
-require_once "../includes/bdd_connect.php";
+if (!empty($_GET)) {
 
-$videoId = $_GET['id'];
+    if (
+        isset($_GET['id']) &&
+        !empty($_GET['id'])
 
+    ) {
 
-$sql = "update `city` WHERE `city`.`id` = :cityid ";
+        $cityId = $_GET['id'];
 
-$query = $pdo->prepare($sql);
+        require_once "../includes/bdd_connect.php";
 
-$query->bindValue(':cityid', $videoId);
-$query->execute();
+        $sql = "update `city` SET `name`, `city_code` WHERE `id` = :cityid ";
 
-header("Location: ../dashboard_pages/city.php");
+        $query = $pdo->prepare($sql);
+
+        $query->bindValue(':cityid', $cityId);
+        $query->execute();
+
+        header("Location: ../dashboard_pages/city.php");
+    }
+}

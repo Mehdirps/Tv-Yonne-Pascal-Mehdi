@@ -23,7 +23,7 @@ require_once "../includes/bdd_connect.php";
         foreach ($resultats as $resultat) {
             $id = $resultat['id'];
             $name = $resultat['name'];
-            $firstname = $resultat['first_name'];
+            $firstname = $resultat['firstname'];
             $email = $resultat['email'];
             $subject = $resultat['subject'];
             $message = $resultat['message'];
