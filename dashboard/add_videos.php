@@ -12,15 +12,22 @@ if (!empty($_POST)) {
         }
         $name = $_POST['name'];
         $img = $_POST['image'];
+        $description = $_POST['description'];
+        $link = $_POST['link'];
+        $city_id = $_POST['city_name'];
 
         require_once "../includes/bdd_connect.php";
 
-        $sql = "INSERT INTO `staffs`(`name`, `img_src`) VALUES (:name, :image)";
+        $sql = "INSERT INTO `videos`(`name`, `img_src`,`description`,`link`,`city_id`) VALUES (:name, :image, :description, :link, :city_id)";
 
         $query = $pdo->prepare($sql);
         $query->bindValue(':name', $name);
         $query->bindValue(':image', $img);
+        $query->bindValue(':description', $description);
+        $query->bindValue(':link',$link);
+        $query->bindValue(':city_id', $city_id);
         $query->execute();
+
         $_SESSION['message'][] = "Les données ont été ajoutées";
     }else{
         $_SESSION['message'][] = "Le formulaire n'est pas complet";
@@ -80,7 +87,8 @@ if (!empty($_POST)) {
 
                         foreach($resultats as $resultat){
                             $name = $resultat['name'];
-                            echo "<option value='$name'>$name</option>";
+                            $id = $resultat['id'];
+                            echo "<option value='$id'>$name</option>";
                         }
                     ?>
                 </select>
