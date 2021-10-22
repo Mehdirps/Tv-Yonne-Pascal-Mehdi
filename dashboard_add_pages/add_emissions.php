@@ -1,6 +1,13 @@
 <?php
     $name = $_POST['name'];
-    var_dump($name);
+
+    require_once "../includes/bdd_connect.php";
+
+    $sql = "INSERT INTO `emissions`(`name`) VALUES (:name)";
+    
+    $query = $pdo->prepare($sql);
+    $query->bindValue(':name', $name);
+    $query->execute();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
