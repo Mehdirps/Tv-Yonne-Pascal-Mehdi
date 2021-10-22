@@ -1,18 +1,33 @@
 <?php
-    $name = $_POST['name'];
-    $code = $_POST['code'];
+session_start();
+if (!empty($_POST)) {
 
-    require_once "../includes/bdd_connect.php";
+    if (
+        isset($_POST['name'], $_POST['code']) &&
+        !empty($_POST['name']) && !empty($_POST['code'])
+    ) {
+        if (!empty($_SESSION['message'])) {
+            header('Location: add_users.php');
+            exit;
+        }
+        $name = $_POST['name'];
+        $code = $_POST['code'];
 
-    $sql = "INSERT INTO `city`(`name`, `city_code`) VALUES (:name, :code)";
-    
-    $query = $pdo->prepare($sql);
-    $query->bindValue(':name', $name);
-    $query->bindValue(':code', $code);
-    $query->execute();
+        require_once "../includes/bdd_connect.php";
+
+        $sql = "INSERT INTO `city`(`name`, `city_code`) VALUES (:name, :code)";
+
+        $query = $pdo->prepare($sql);
+        $query->bindValue(':name', $name);
+        $query->bindValue(':code', $code);
+        $query->execute();
+    }
+}
+$_SESSION['message'][] = "Le formulaire n'est pas complet";
 ?>
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,25 +35,35 @@
     <title>Ajouter une emission</title>
     <link rel="stylesheet" href="../css/dashboard.css">
 </head>
+
 <body>
-   <?php
-   include "../dashboard_includes/dashboard_nav.php";
-   ?>
-   <main class="add">
-   <h1>Ajouter une emission</h1>
-    <form method="post">
-        <div>
-            <label for="name">Nom</label>
-            <input type="text" name="name">
-        </div>
-        <div>
-            <label for="code">Code commune</label>
-            <input type="text" name="code">
-        </div>
-        <div>
-            <button type="submit">Ajouter</button>
-        </div>
-    </form>
+    <?php
+    include "../dashboard_includes/dashboard_nav.php";
+    ?>
+    <main class="add">
+        <h1>Ajouter une emission</h1>
+        <?php
+        if (isset($_SESSION['message'])) {
+            foreach ($_SESSION['message'] as $message) {
+                echo "<p>$message</p>";
+            }
+            unset($_SESSION['message']);
+        }
+        ?>
+        <form method="post">
+            <div>
+                <label for="name">Nom</label>
+                <input type="text" name="name">
+            </div>
+            <div>
+                <label for="code">Code commune</label>
+                <input type="text" name="code">
+            </div>
+            <div>
+                <button type="submit">Ajouter</button>
+            </div>
+        </form>
     </main>
 </body>
+
 </html>

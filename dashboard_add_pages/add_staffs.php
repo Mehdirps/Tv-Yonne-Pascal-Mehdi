@@ -1,19 +1,35 @@
 <?php
-    $name = $_POST['name'];
-    $img = $_POST['image'];
+session_start();
+if (!empty($_POST)) {
 
-    require_once "../includes/bdd_connect.php";
+    if (
+        isset($_POST['name'], $_POST['image']) &&
+        !empty($_POST['name']) && !empty($_POST['image'])
+    ) {
+        if (!empty($_SESSION['message'])) {
+            header('Location: add_users.php');
+            exit;
+        }
+        $name = $_POST['name'];
+        $img = $_POST['image'];
 
-    $sql = "INSERT INTO `staffs`(`name`, `img_src`) VALUES (:name, :image)";
-    
-    $query = $pdo->prepare($sql);
-    $query->bindValue(':name', $name);
-    $query->bindValue(':image', $img);
+        require_once "../includes/bdd_connect.php";
 
-    $query->execute();
+        $sql = "INSERT INTO `staffs`(`name`, `img_src`) VALUES (:name, :image)";
+
+        $query = $pdo->prepare($sql);
+        $query->bindValue(':name', $name);
+        $query->bindValue(':image', $img);
+
+        $query->execute();
+    }
+}
+$_SESSION['message'][] = "Le formulaire n'est pas complet";
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,25 +37,35 @@
     <title>Ajouter une emission</title>
     <link rel="stylesheet" href="../css/dashboard.css">
 </head>
+
 <body>
-   <?php
-   include "../dashboard_includes/dashboard_nav.php";
-   ?>
-   <main class="add">
-   <h1>Ajouter une emission</h1>
-    <form method="post">
-        <div>
-            <label for="name">Nom</label>
-            <input type="text" name="name">
-        </div>
-        <div>
-            <label for="img">Image</label>
-            <input type="file" name="image" id="image">
-        </div>
-        <div>
-            <button type="submit">Ajouter</button>
-        </div>
-    </form>
+    <?php
+    include "../dashboard_includes/dashboard_nav.php";
+    ?>
+    <main class="add">
+        <h1>Ajouter une emission</h1>
+        <?php
+        if (isset($_SESSION['message'])) {
+            foreach ($_SESSION['message'] as $message) {
+                echo "<p>$message</p>";
+            }
+            unset($_SESSION['message']);
+        }
+        ?>
+        <form method="post">
+            <div>
+                <label for="name">Nom</label>
+                <input type="text" name="name">
+            </div>
+            <div>
+                <label for="img">Image</label>
+                <input type="file" name="image" id="image">
+            </div>
+            <div>
+                <button type="submit">Ajouter</button>
+            </div>
+        </form>
     </main>
 </body>
+
 </html>
