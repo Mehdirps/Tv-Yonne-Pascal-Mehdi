@@ -10,7 +10,7 @@ require_once "../includes/bdd_connect.php";
             <p class="delete">Supprimer</p>
             <p>Nom</p>
             <p>Description</p>
-            <p>Nom Ville</p>
+            <p>Id Ville</p>
         </div>
         <?php
         $sql = "SELECT * FROM `videos`";
@@ -21,7 +21,7 @@ require_once "../includes/bdd_connect.php";
             $id = $resultat['id'];
             $name = $resultat['name'];
             $description = $resultat['description'];
-            $name_city = $resultat['name_city'];
+            $name_city = $resultat['city_id'];
             
             echo
             "<div class='datas'>
